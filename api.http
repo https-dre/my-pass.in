@@ -1,0 +1,31 @@
+POST http://localhost:8000/events
+Content-Type: application/json
+
+{
+    "title": "NLW Unit",
+    "details": null,
+    "maximumAttendes": null
+}
+
+###
+
+POST http://localhost:8000/events/06485d37-0e2d-4a1b-bd0d-c3363dbd417b/attendees
+Content-Type: application/json
+
+{ 
+    "name": "André Dias",
+    "email": "dias@gmail.com"
+}
+
+###
+GET http://localhost:8000/events/06485d37-0e2d-4a1b-bd0d-c3363dbd417b
+Content-Type: application/json
+
+###
+GET http://localhost:8000/attendees/2/badge
+
+###
+GET http://localhost:8000/attendees/2/check-in
+
+###
+GET http://localhost:8000/events/9ac7a585-0922-4eea-a7fb-e7f144f0bea7/attendees?query=Dias
