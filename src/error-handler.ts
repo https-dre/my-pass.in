@@ -13,8 +13,9 @@ export const errorHandler: FastifyErrorHandler = (error, request, reply) => {
     }
     
     if (error instanceof BadRequest) {
-        return reply.status(400).send({ message: error.message})
+        return reply.status(error.statusNumber).send({ message: error.message})
     }
 
-    return reply.status(500).send({ message: 'Error'})
+    console.log(`\t[ERROR]: erro não tratado ocorrido: ${error}`)
+    return reply.status(500).send(error)
 }
