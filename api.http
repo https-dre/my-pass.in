@@ -29,3 +29,13 @@ GET http://localhost:8000/attendees/2/check-in
 
 ###
 GET http://localhost:8000/events/9ac7a585-0922-4eea-a7fb-e7f144f0bea7/attendees?query=Dias
+
+###
+
+POST http://localhost:8000/administrators
+Content-Type: application/json
+
+{
+    "login": "login-as-adm",
+    "password": "password-primeiro-adm"
+}
