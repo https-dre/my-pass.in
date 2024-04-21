@@ -14,7 +14,8 @@ export async function createEventRoute(app: FastifyInstance) {
                 body: z.object({
                     title: z.string().min(4),
                     details: z.string().nullable(),
-                    maximumAttendes: z.number().int().positive().nullable()
+                    maximumAttendes: z.number().int().positive().nullable(),
+                    admId: z.string().uuid()
                 }),
                 response: {
                     201: z.object({
@@ -28,7 +29,8 @@ export async function createEventRoute(app: FastifyInstance) {
             const {
                 title,
                 details,
-                maximumAttendes
+                maximumAttendes,
+                admId
             } = request.body
 
             const slug = generateSlug(title);
@@ -48,7 +50,8 @@ export async function createEventRoute(app: FastifyInstance) {
                     title: title,
                     details: details,
                     maximumAttendes: maximumAttendes,
-                    slug
+                    slug,
+                    admId
                 }
             })
 
