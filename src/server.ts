@@ -12,6 +12,7 @@ import { getAttendeeBadgeRoute } from "./routes/get-attendee-badge";
 import { checkIn } from "./routes/check-in";
 import { getEventAttendees } from "./routes/get-event-attendees";
 import { errorHandler } from "./error-handler";
+import { createAdmRoute } from "./routes/create-adm";
 
 const app = fastify();
 
@@ -49,6 +50,7 @@ app.register(getEventRoute);
 app.register(getAttendeeBadgeRoute);
 app.register(checkIn);
 app.register(getEventAttendees);
+app.register(createAdmRoute);
 
 app.setErrorHandler(errorHandler);
 
