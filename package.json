@@ -18,11 +18,20 @@
 		"seed": "tsx prisma/seed.ts"
 	},
 	"devDependencies": {
+		"@eslint/eslintrc": "^3.0.2",
+		"@eslint/js": "^9.1.1",
 		"@types/node": "^20.12.7",
+		"@typescript-eslint/eslint-plugin": "^6.4.0",
+		"eslint": "^8.0.1",
+		"eslint-config-standard-with-typescript": "^43.0.1",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+		"eslint-plugin-promise": "^6.0.0",
+		"globals": "^15.0.0",
 		"prisma": "^5.12.1",
 		"tsup": "^8.0.2",
 		"tsx": "^4.7.2",
-		"typescript": "^5.4.5"
+		"typescript": "*"
 	},
 	"dependencies": {
 		"@fastify/cors": "^9.0.1",
